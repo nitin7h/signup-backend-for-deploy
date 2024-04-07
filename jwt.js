@@ -1,6 +1,8 @@
+require('dotenv').config()
 const jwt = require("jsonwebtoken")
 
-const secrateKey = "Nitin@123"
+
+const secrateKey = process.env.KEY
 
 const tokenGenrator = (payload) => {
     try {

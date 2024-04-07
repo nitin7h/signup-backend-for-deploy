@@ -31,9 +31,9 @@ app.use(cors())
 
 
 
+const url = process.env.DataBaseUrl
 
-
-mongoose.connect(process.env.DataBaseUrl)
+mongoose.connect(url)
     .then(() => { console.log("Mongodb Connected...") })
     .catch((error) => {
         console.log("Mongo error " + error);
